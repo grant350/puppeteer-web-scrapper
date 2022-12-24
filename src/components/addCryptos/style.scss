@@ -1,0 +1,25 @@
+.userListCryptosCt{
+  height:650px;
+  width: 50%;
+  position: relative;
+}
+
+.userListCryptos{
+  background:#00ff729e;
+  width:100%;
+  max-height: 600px;
+  overflow:scroll;
+  font-size:15px;
+  display:block
+  tr{
+    height: 50px;
+      width: 100%;
+      max-height:50px;
+
+  }
+  img {
+    width:50px;
+    height:50px;
+
+  }
+}

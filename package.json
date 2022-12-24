@@ -1,0 +1,59 @@
+{
+  "name": "crypto-calculator",
+  "version": "1.0.0",
+  "description": "reads cryptos",
+  "main": "SERVER/server.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "testOpenHandles": "jest --detectOpenHandles --forceExit",
+    "test": "jest",
+    "build": "webpack",
+    "start": "node backend/SERVER/server.js",
+    "autobuild": "webpack-dev-server"
+  },
+  "web": "npm start",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grant350/hr-rpp33-mvp.git"
+  },
+  "author": "grant mitchell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grant350/hr-rpp33-mvp/issues"
+  },
+  "homepage": "https://github.com/grant350/hr-rpp33-mvp#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "cors": "^2.8.5",
+    "css-loader": "^6.5.1",
+    "dom-parser": "^0.1.6",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "jest": "^27.4.7",
+    "jquery": "^3.6.0",
+    "jsdom": "^16.7.0",
+    "mongoose": "^6.1.7",
+    "nodemon": "^2.0.15",
+    "puppeteer": "^13.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "requests": "^0.3.0",
+    "rxjs": "^7.5.2",
+    "style-loader": "^3.3.1",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "sass": "^1.48.0",
+    "sass-loader": "^12.4.0",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
