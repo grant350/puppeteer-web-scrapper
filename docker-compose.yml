@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  web:
+    container_name: puppeteer
+    build: .
+    ports:
+      - "80:3000"
+    links:
+      - mongoService
+    networks:
+        mongo_net:
+      # docker-compose up --build web
+  mongoService:
+    image: mongo
+    container_name: mongo
+    environment:
+          MONGO_INITDB_ROOT_USERNAME: grant
+          MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./mongo.conf:/etc/mongod.conf
+    networks:
+          mongo_net:
+networks:
+  mongo_net:
+    driver: bridge

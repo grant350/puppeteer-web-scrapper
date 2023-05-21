@@ -6,7 +6,12 @@ var parser = new DomParser();
 function ParsePage(options, domParser){
 return  new Promise ((res,rej)=>{
   async function puppet(){
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      headless: "new",
+      args: [
+        '--no-sandbox'
+      ]
+    });
     const page = await browser.newPage();
     await page.goto(options.puppetURL,{"waitUntil" : "networkidle0"});
     await page.setViewport({width:800, height:1000})

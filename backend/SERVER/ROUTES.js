@@ -18,7 +18,7 @@ var Utilites = {
 
   addCryptos(req,res,data){
     Utilites.puppetMaster(this.options,Utilites.ParseHTML).then(coins=>{
-
+      console.log(coins);
       this.db.UpdateAll(coins).then(results=>{
         if (res){
         res.json({success:'made coins'})
